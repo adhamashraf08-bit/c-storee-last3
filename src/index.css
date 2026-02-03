@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* C Store Premium Dashboard Design System */
+
+@layer base {
+  :root {
+    /* Core palette - Enhanced with vibrant gradients */
+    --background: 0 0% 100%;
+    --foreground: 330 50% 15%;
+
+    --card: 330 60% 98%;
+    --card-foreground: 330 50% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 330 50% 15%;
+
+    /* Primary - Hot Pink with gradient support */
+    --primary: 330 81% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light Pink */
+    --secondary: 330 100% 95%;
+    --secondary-foreground: 330 50% 15%;
+
+    /* Muted */
+    --muted: 330 30% 92%;
+    --muted-foreground: 330 15% 47%;
+
+    /* Accent - Deep Pink */
+    --accent: 330 75% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 330 30% 90%;
+    --input: 330 30% 90%;
+    --ring: 330 81% 55%;
+
+    --radius: 0.75rem;
+
+    /* Branch colors - Vibrant gradient palette */
+    --branch-dark-store: 330 81% 45%;
+    --branch-dark-store-end: 310 75% 55%;
+    --branch-maadi: 300 70% 55%;
+    --branch-maadi-end: 280 65% 60%;
+    --branch-masr-el-gededa: 350 75% 60%;
+    --branch-masr-el-gededa-end: 340 70% 65%;
+    --branch-tagamo3: 315 80% 50%;
+    --branch-tagamo3-end: 295 75% 55%;
+
+    /* Channel colors - Enhanced spectrum */
+    --channel-talabat: 330 81% 55%;
+    --channel-talabat-end: 310 75% 60%;
+    --channel-instashop: 300 75% 60%;
+    --channel-instashop-end: 280 70% 65%;
+    --channel-callcenter: 350 70% 65%;
+    --channel-callcenter-end: 340 65% 70%;
+    --channel-website: 315 80% 55%;
+    --channel-website-end: 295 75% 60%;
+
+    /* KPI colors - Premium gradients */
+    --kpi-sales: 330 81% 55%;
+    --kpi-sales-end: 310 75% 60%;
+    --kpi-orders: 300 75% 60%;
+    --kpi-orders-end: 280 70% 65%;
+    --kpi-target: 350 70% 50%;
+    --kpi-target-end: 340 65% 55%;
+    --kpi-achievement: 315 80% 55%;
+    --kpi-achievement-end: 295 75% 60%;
+
+    /* Sidebar */
+    --sidebar-background: 330 50% 15%;
+    --sidebar-foreground: 330 10% 85%;
+    --sidebar-primary: 330 81% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 330 50% 20%;
+    --sidebar-accent-foreground: 330 10% 85%;
+    --sidebar-border: 330 30% 25%;
+    --sidebar-ring: 330 81% 55%;
+
+    /* Premium Gradients */
+    --gradient-cosmic: linear-gradient(135deg, #e31782 0%, #a855f7 50%, #3b82f6 100%);
+    --gradient-sunset: linear-gradient(135deg, #f97316 0%, #e31782 50%, #a855f7 100%);
+    --gradient-ocean: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+    --gradient-aurora: linear-gradient(135deg, #10b981 0%, #06b6d4 50%, #8b5cf6 100%);
+    --gradient-fire: linear-gradient(135deg, #ef4444 0%, #f97316 50%, #fbbf24 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(330 81% 55%), hsl(310 75% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(330 75% 50%), hsl(310 70% 55%));
+    --gradient-success: linear-gradient(135deg, hsl(315 80% 55%), hsl(295 75% 60%));
+    --gradient-warning: linear-gradient(135deg, hsl(350 75% 60%), hsl(340 70% 65%));
+
+    /* Glass effect colors */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: rgba(227, 23, 130, 0.1);
+
+    /* Premium Shadows */
+    --shadow-card: 0 4px 20px -4px rgba(227, 23, 130, 0.12), 0 2px 8px -2px rgba(227, 23, 130, 0.08);
+    --shadow-card-hover: 0 12px 40px -8px rgba(227, 23, 130, 0.25), 0 6px 16px -4px rgba(227, 23, 130, 0.15);
+    --shadow-glow-accent: 0 0 40px -5px hsl(330 81% 55% / 0.5), 0 0 20px -5px hsl(310 75% 60% / 0.3);
+    --shadow-glow-cosmic: 0 0 60px -10px rgba(227, 23, 130, 0.4), 0 0 30px -5px rgba(168, 85, 247, 0.3);
+  }
+
+  .dark {
+    --background: 330 30% 8%;
+    --foreground: 330 10% 98%;
+
+    --card: 330 30% 11%;
+    --card-foreground: 330 10% 98%;
+
+    --popover: 330 30% 11%;
+    --popover-foreground: 330 10% 98%;
+
+    --primary: 330 81% 60%;
+    --primary-foreground: 330 30% 11%;
+
+    --secondary: 330 30% 17%;
+    --secondary-foreground: 330 10% 98%;
+
+    --muted: 330 20% 17%;
+    --muted-foreground: 330 10% 65%;
+
+    --accent: 330 75% 55%;
+    --accent-foreground: 330 30% 11%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 330 10% 98%;
+
+    --border: 330 20% 17%;
+    --input: 330 20% 17%;
+    --ring: 330 81% 60%;
+
+    --sidebar-background: 330 30% 6%;
+    --sidebar-foreground: 330 10% 85%;
+    --sidebar-primary: 330 81% 60%;
+    --sidebar-primary-foreground: 330 30% 11%;
+    --sidebar-accent: 330 30% 12%;
+    --sidebar-accent-foreground: 330 10% 85%;
+    --sidebar-border: 330 20% 15%;
+    --sidebar-ring: 330 81% 60%;
+
+    /* Dark mode glass effects */
+    --glass-bg: rgba(30, 10, 20, 0.4);
+    --glass-border: rgba(227, 23, 130, 0.2);
+    --glass-shadow: rgba(227, 23, 130, 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01";
+    /* Ambient background gradient */
+    background-image: radial-gradient(circle at 20% 10%, rgba(227, 23, 130, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 90%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.03) 0%, transparent 70%);
+    background-attachment: fixed;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, hsl(330 81% 55%), hsl(310 75% 60%));
+    @apply rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, hsl(330 81% 65%), hsl(310 75% 70%));
+  }
+}
+
+@layer components {
+
+  /* Glassmorphism Card Styles */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 var(--glass-shadow);
+  }
+
+  /* Premium KPI Card styles */
+  .kpi-card {
+    @apply bg-card rounded-2xl p-6 border border-border/50 transition-all duration-500 relative overflow-hidden;
+    box-shadow: var(--shadow-card);
+    animation: float 6s ease-in-out infinite;
+    min-height: 140px;
+  }
+
+  .kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .kpi-card:hover::before {
+    left: 100%;
+  }
+
+  .kpi-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px) scale(1.02);
+    @apply border-accent/40;
+  }
+
+  /* Branch card variants with gradients */
+  .branch-card-dark-store {
+    background: linear-gradient(135deg, hsl(var(--branch-dark-store)) 0%, hsl(var(--branch-dark-store-end)) 100%);
+    @apply text-white;
+  }
+
+  .branch-card-maadi {
+    background: linear-gradient(135deg, hsl(var(--branch-maadi)) 0%, hsl(var(--branch-maadi-end)) 100%);
+    @apply text-white;
+  }
+
+  .branch-card-masr-el-gededa {
+    background: linear-gradient(135deg, hsl(var(--branch-masr-el-gededa)) 0%, hsl(var(--branch-masr-el-gededa-end)) 100%);
+    @apply text-white;
+  }
+
+  .branch-card-tagamo3 {
+    background: linear-gradient(135deg, hsl(var(--branch-tagamo3)) 0%, hsl(var(--branch-tagamo3-end)) 100%);
+    @apply text-white;
+  }
+
+  /* Achievement badge styles with gradients */
+  .achievement-excellent {
+    background: linear-gradient(135deg, #10b981, #059669);
+    @apply text-white shadow-lg;
+  }
+
+  .achievement-good {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    @apply text-white shadow-lg;
+  }
+
+  .achievement-warning {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    @apply text-white shadow-lg;
+  }
+
+  .achievement-critical {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    @apply text-white shadow-lg;
+  }
+
+  /* Animated gradient background */
+  .gradient-animated {
+    background: linear-gradient(-45deg, #e31782, #a855f7, #3b82f6, #06b6d4);
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Float animation for cards */
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  /* Shimmer effect */
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Pulse animation with glow */
+  .pulse-live {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      opacity: 1;
+      box-shadow: var(--shadow-glow-accent);
+    }
+
+    50% {
+      opacity: 0.85;
+      box-shadow: var(--shadow-glow-cosmic);
+    }
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: var(--gradient-cosmic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Chat bubble styles with glass effect */
+  .chat-bubble-user {
+    background: linear-gradient(135deg, hsl(330 81% 55%), hsl(310 75% 60%));
+    @apply text-white rounded-2xl rounded-br-sm px-4 py-3 shadow-lg;
+  }
+
+  .chat-bubble-assistant {
+    @apply glass-card rounded-2xl rounded-bl-sm px-4 py-3;
+  }
+
+  /* Premium Upload zone */
+  .upload-zone {
+    @apply glass-card border-2 border-dashed rounded-xl p-8 transition-all duration-500;
+    border-color: var(--glass-border);
+  }
+
+  .upload-zone:hover {
+    border-color: hsl(var(--accent));
+    box-shadow: var(--shadow-glow-accent);
+    transform: scale(1.01);
+  }
+
+  .upload-zone.dragging {
+    background: linear-gradient(135deg, rgba(227, 23, 130, 0.1), rgba(168, 85, 247, 0.1));
+    border-color: hsl(var(--accent));
+    box-shadow: var(--shadow-glow-cosmic);
+    transform: scale(1.02);
+  }
+}
+
+@layer utilities {
+
+  /* Number formatting utilities */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
